@@ -1,5 +1,5 @@
 # general configuration
-url: http://miwong.me
+url: http://runwang.me
 baseurl: ''
 
 # compass configuration
@@ -7,10 +7,10 @@ compass:
   # an avatar or logo (optional)
   logo: "/images/profile.jpg"
   # author will appear under the avatar (optional)
-  author: "Michelle Wong"
+  author: "Run Wang"
   # tagline will appear under the title (optional)
   tagline: "PhD student in computer security"
-  about: "Dept. of Electrical and Computer Engineering<br>University of Toronto<br><br>Supervisor: David Lie<br><br><br>E-mail: michelley.wong[at]mail.utoronto.ca<br>Office: D.L. Pratt Building, Room 372"
+  about: "Dept. of Computer School<br>Wuhan University<br><br>Supervisor: Li-na Wang<br><br><br>E-mail: wangrun[at]whu.edu.cn<br>Office: Room C309, Computer  School, Wuhan University, Hubei Province"
   # if include_content is true, the contents of the content.html include will be
   # added right above the generated item list, if present
   include_content: true
