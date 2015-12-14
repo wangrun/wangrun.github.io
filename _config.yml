@@ -10,7 +10,7 @@ compass:
   author: "Run Wang"
   # tagline will appear under the title (optional)
   tagline: "PhD student in computer security"
-  about: "Dept. of Computer School<br>Wuhan University<br><br>Supervisor: Pro.  Lina Wang<br><br><br>E-mail: wangrun@whu.edu.cn<br>Office: Room C309, Computer  School, Wuhan University, Hubei Province"
+  about: "School of Computer Science<br>Wuhan University<br><br>Supervisor: Pro.  Lina Wang<br><br><br>E-mail: wangrun@whu.edu.cn<br>Office: Room C309, Computer  School, Wuhan University, Hubei Province"
   # if include_content is true, the contents of the content.html include will be
   # added right above the generated item list, if present
   include_content: true
