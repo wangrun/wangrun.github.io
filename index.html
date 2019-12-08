@@ -4,30 +4,62 @@
 
 <link rel="stylesheet" href="./source_files/jemdoc.css" type="text/css">
 <title>Run Wang - Homepage</title>
-<script type="text/javascript" src="./source_files/jquery-1.12.4.min.js"></script></head>
+<script type="text/javascript" src="./source_files/jquery-1.12.4.min.js"></script>
+
+</head>
 <body>
 <div id="layout-content">
 <div id="toptitle">
-<h1><font color="#880000">Run Wang @ NTU-CS</font></h1>
+<!--<h1 id = "home"><a href="#publications"><font color="#880000">Run Wang @ NTU-CS</font></a>-->
+<h1 width=100% id="home"><font color="#880000">Run Wang @ NTU-CS</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://wangrun.github.io"><font color="#880000" size="4.0px">Home</font></a>
+&nbsp;&nbsp;&nbsp;
+<a href="#publications"><font color="#880000" size="4.0px">Publications &nbsp;&nbsp;</font></a>
+<a href="#contacts"><font color="#880000" size="4.0px">Contact &nbsp;&nbsp;</font></a>
+
+</h1>
 </div>
-<table class="imgtable"><tbody><tr><td>
-<img src="./source_files/wr.jpg" alt="wangrun" width="189px" height="270px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<table class="imgtable"><tbody>
+<tr>
+<td>
+<img src="./source_files/wr.jpg" alt="wangrun" width="168px" height="240px">&nbsp;&nbsp;</td>
 <td align="left">
   <img src="./source_files/wr-ch.png" alt="Chinesename" width="130" height="68">
-  <p><font size="5.5px">&nbsp;Run Wang</font><br><br>
+  <p><font size="6.0px">Run Wang</font><br>
 
 <b>Ph.D, &nbsp;Research Fellow</b><br><br>
 School of Computer Science and Engineering<br>
-<a href="http://www.ntu.edu.sg" target="_blank">Nanyang Technological University (NTU), Singapore</a>
+<a href="http://www.ntu.edu.sg" target="_blank">Nanyang Technological University, Singapore</a><br> </p>
 
-<p><b>Office</b>: &nbsp;&nbsp;N4-B2c-06, Cyber Security Lab, School of Computer Science and Engineering, Nanyang Technological University<br>
+<!--<p><b>Office</b>: &nbsp;&nbsp;N4-B2c-06, Cyber Security Lab, School of Computer Science and Engineering, Nanyang Technological University<br>-->
 <b>Email</b>: &nbsp;&nbsp;runwang@yeah.net <b><i>or</i></b> run.wang@ntu.edu.sg<br><br></p>
-</td></tr></tbody></table>
+</td>
+<td align="right">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="4px">Research Topics</font></b>
+<br><br>
+<ul style="list-style-position:inside;">
+<li><a href="#topics"> Software and Systems Security </a></li>
+</ul>
+<ul style="list-style-position:inside;">
+<li><a href="#topics"> Data-driven Security </a></li>
+</ul>
+<ul style="list-style-position:inside;">
+<li><a href="#topics"> AI Systems Security </a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+
 <h2>About Me</h2>
 <ul>
 <li>
   <p style="text-align:justify;">
-    I am currently a postdoctoral research fellow working with <a href="http://www.ntu.edu.sg/home/yangliu/" target="_blank">Prof. LIU Yang</a> at Cyber Security Lab of Nanyang Technological University (NTU), Singapore, since Apr. 2019.
+    I am currently a postdoctoral research fellow working with <a href="http://www.ntu.edu.sg/home/yangliu/" target="_blank">Prof. LIU Yang</a> at Cyber Security Lab of Nanyang Technological University (NTU), Singapore, since Apr. 2019. My research interests are at the intersection of computer security and AI. Specifically, most of our research aims at securing low-level software and systems security and developing real-world robust and interpretable learning systems.
   </p>
 </li>
 <li>
@@ -64,9 +96,10 @@ School of Computer Science and Engineering<br>
 </li>
 </ul>
 
-<h2>Research Interests</h2>
-<p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My research interests are at the intersection of computer security and AI. Recently, my primary research focus on <b>Software and Systems Security</b>, and <b>AI Security</b>.</p>
+<h2 id="topics">Research Interests</h2>
+<p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recently, my primary research focus on <b>Software and Systems Security</b>, <b>Data-driven Security</b>, and <b>AI Security</b>.</p>
 
+<!--
 <ul>
   <li><p style="text-align:justify;"><b>Software and Systems Security.</b> I am interested in using AI techniques to address software and systems security problems (e.g., malware detection and vulnerability analysis) in Android and IoT platforms.</li>
 </ul>
@@ -74,9 +107,21 @@ School of Computer Science and Engineering<br>
 <ul>
   <li><p style="text-align:justify;"><b>AI Security.</b> My research aims at building more robust, safe, and interpretable AI systems by performing the certification (e.g., testing and verification) and explanation of AI systems.</li>
 </ul>
+-->
+<ul>
+  <li><p style="text-align:justify;"><b>Software and Systems Security.</b> I study the security and privacy issues caused by vulnerabilities and malware by employing program analysis and AI techniques in securing software and systems.</li>
+</ul>
+
+<ul>
+  <li><p style="text-align:justify;"><b>Data-driven Security.</b> I am interested in adopting machine learning, natural language processing techniques to address the security and privacy issues driven by massive system data, network data, application data, etc.</li>
+</ul>
+
+<ul>
+  <li><p style="text-align:justify;"><b>AI Systems Security.</b> I explore vulnerabilities of machine learning systems and endeavor to develop real-world robust and interpretable learning systems.</li>
+</ul>
 
 
-<h2>Publications</h2>
+<h2 id="publications">Publications</h2>
 <h3>Journal Articles</h3>
 <!--<h4>2018</h4>-->
 
@@ -160,21 +205,33 @@ School of Computer Science and Engineering<br>
 <h3>Conference Papers</h3>
 
 <ol>
-<li><p style="text-align:justify;"><a href="./paper/COMPSAC-2015.pdf" target="_blank">Reversing and Identifying Overwritten Data Structures for Memory-corruption Exploit Diagnosis</a>
+<li><p style="text-align:justify;"><a href="./paper/COMPSAC-2015.pdf" target="_blank">Capturing the Persistence of Facial Expression Features for Deepfake Video Detection</a>
+<br>Yiru Zhao, Wanfeng Ge, Wenxin Li, <u><b>Run Wang</b></u>, Lei Zhao and Jiang Ming.
+<br><a href="http://www.icics.cn/"><i>The 2019 International Conference on Information and Communications Security (ICICS’19)</i></a>, Beijing, China. (<i>Accepted to appear</i>)</p>
+</li>
+
+<li><p style="text-align:justify;"><a target="_blank">Reversing and Identifying Overwritten Data Structures for Memory-corruption Exploit Diagnosis</a>
 <br>Lei Zhao, <u><b>Run Wang</b></u>, Lina Wang, Yueqiang Cheng.
 <br><a href="http://accv2018.net/"><i>The 39th Annual International Computers, Software & Applications Conference (COMPSAC’15)</i></a>, Taiwan, China, 2015, 2: 434-443. (CCF-C, EI)</p>
 </li>
 </ol>
 
-<!--
+
 <h3>Manuscripts</h3>
 <ul>
-<li><p style="text-align:justify;"><a>SmartPI: Understanding Permission Implications of Android Apps from User Reviews</a>
-<br><u><b>Run Wang</b></u>, Zhibo Wang, Benxiao Tang, Lei Zhao, Lina Wang.
-<br><i>IEEE Transactions on Mobile Computing.</i>&nbsp;&nbsp;(Minor Revisions)</p>
+<li><p style="text-align:justify;"><a href="https://arxiv.org/abs/1909.06122">FakeSpotter: FakeSpotter: A Simple Baseline for Spotting AI-Synthesized Fake Faces</a>
+<br><u><b>Run Wang</b></u>, Lei Ma, Felix Juefei-Xu, Xiaofei Xie, Jian Wang, Yang Liu.
+<br><i>arXiv preprint arXiv:1909.06122, 2019.</i></p>
+<font color="#BB2222" size="4.0px">Media coverage</font>: <a href="https://syncedreview.com/2019/09/23/ai-vs-ai-fakespotter-studies-neurons-to-bust-deepfakes/"> <i>AI vs AI: ‘FakeSpotter’ Studies Neurons to Bust DeepFakes</i></a> by the media of AI Industry Review!
 </li>
+
+<li><p style="text-align:justify;"><a>Amora: Black-box Adversarial Morphing Attack</a>
+<br><u><b>Run Wang</b></u>, Felix Juefei-Xu, Xiaofei Xie, Lei Ma, Yihao Huang, Yang Liu.
+<br><i>Submitted to CVPR'2020.</i></p>
+</li>
+
 </ul>
--->
+
 
 <h2>Invited Talks</h2>
 <ul>
@@ -259,10 +316,10 @@ School of Computer Science and Engineering<br>
 -->
 
 </ul>
-<h2>Correspondence</h2>
+<h2 id = "contacts">Correspondence</h2>
 <h3>Mail</h3>
 <p>Run Wang <br>
-N4-B2c-06<br>
+N4-B2c-06, Cyber Security Lab<br>
 School of Computer Science and Engineering, Nanyang Technological University <br>
 50 Nanyang Avenue, Singapore 639798</p>
 
@@ -277,7 +334,7 @@ School of Computer Science and Engineering, Nanyang Technological University <br
 
 <div id="footer">
 <div id="footer-text">
-© 2018 Wang Run. All rights reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last updated: 15/08/2018
+© 2018 Wang Run. All rights reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last updated: 12/2019
 </div>
 </div>
 </div>
