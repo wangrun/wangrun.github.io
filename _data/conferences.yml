@@ -106,6 +106,7 @@
   link:
   # comment: Three deadlines
   deadline: "2021-04-06 12:00"
+  timezone: Asia/Shanghai
   place: 网安基地3楼
   tags: [FUND]
 
@@ -117,6 +118,7 @@
   link:
   comment:
   deadline: "2021-04-01 12:00"
+  timezone: Asia/Shanghai
   place: 网安学院
   tags: [AFF]
 
@@ -127,5 +129,6 @@
   link:
   comment: 周五上午3-5节
   deadline: "2021-04-09 18:00"
+  timezone: Asia/Shanghai
   place: 网安基地
   tags: [AFF]
