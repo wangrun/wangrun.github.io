@@ -99,29 +99,33 @@
 
 
 # Research Fundings
-- name:  NSFC
-  year: 2022
-  date: "May 22 – 26 2022"
-  description: IEEE Symposium on Security and Privacy
-  link: https://www.ieee-security.org/TC/SP2022/
-  comment: Three deadlines
-  deadline:
-    - "2021-04-15 23:59"
-    - "2021-08-19 23:59"
-    - "2021-12-02 23:59"
-  place: San Francisco, California, USA
+- name:  装发本子
+  year: 2021
+  date: "April 06 – 06 2021"
+  description: 装发的本子提交给闻谊
+  link:
+  # comment: Three deadlines
+  deadline: "2021-04-06 12:00"
+  place: 网安基地3楼
   tags: [FUND]
 
 # SCSE Affairs
 - name:  研究生复试
-  year: 2022
-  date: "May 22 – 26 2022"
-  description: IEEE Symposium on Security and Privacy
-  link: https://www.ieee-security.org/TC/SP2022/
-  comment: Three deadlines
-  deadline:
-    - "2021-04-15 23:59"
-    - "2021-08-19 23:59"
-    - "2021-12-02 23:59"
-  place: San Francisco, California, USA
+  year: 2021
+  date: "April 01 – 01 2021"
+  description: 2021年研究生复试
+  link:
+  comment:
+  deadline: "2021-04-01 12:00"
+  place: 网安学院
+  tags: [AFF]
+
+- name: 网络安全学术研究与探索
+  year: 2021
+  date: "April 09 – 09 2021"
+  description: 2021年博士生课
+  link:
+  comment: 周五上午3-5节
+  deadline: "2021-04-09 18:00"
+  place: 网安基地
   tags: [AFF]
