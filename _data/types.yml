@@ -1,7 +1,11 @@
 ---
+- name: AI
+  tag: AI
 - name: Security
   tag: SEC
-- name: Privacy
-  tag: PRIV
-- name: Crypto
-  tag: CRYPTO
+- name: SE
+  tag: SE
+- name: Funding
+  tag: FUND
+- name: Affairs
+  tag: AFF
