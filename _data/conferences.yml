@@ -9,7 +9,7 @@
   # comment: Three deadlines
   # deadline: Sun Apr 18 2021 19:59:59
   deadline: "2021-04-17 23:59:59"
-  timezone: UTC-12
+  # timezone: UTC-12
   place: Chengdu, China
   tags: [AI]
 
@@ -18,10 +18,10 @@
   date: "December 5-14, 2021"
   description: Thirty-fifth Conference on Neural Information Processing Systems
   link: https://neurips.cc/Conferences/2021/
-  deadline: '2021-05-26 13:00:00'
+  deadline: "2021-05-26 13:00:00"
   timezone: America/Los_Angeles
   place: Online
-  tag: [AI]
+  tags: [AI]
 
 
 - name: AAAI (TBD)
@@ -29,10 +29,10 @@
   date: "December 5-14, 2021"
   description: The Thirty-sixth Conference on Artificial Intelligence (AAAI-22)
   link: https://neurips.cc/Conferences/2021/
-  deadline: '2021-05-26 13:00:00'
+  deadline: "2021-05-26 13:00:00"
   timezone: America/Los_Angeles
   place: Online
-  tag: [AI]
+  tags: [AI]
 
 # Security and Privacy
 - name: S&P (Oakland)
@@ -90,14 +90,11 @@
 - name:  ICSE
   year: 2022
   date: "May 22 – 26 2022"
-  description: IEEE Symposium on Security and Privacy
-  link: https://www.ieee-security.org/TC/SP2022/
-  comment: Three deadlines
-  deadline:
-    - "2021-04-15 23:59"
-    - "2021-08-19 23:59"
-    - "2021-12-02 23:59"
-  place: San Francisco, California, USA
+  description: 44th International Conference on Software Engineering (ICSE 2022)
+  link: https://conf.researchr.org/home/icse-2022
+  # comment: Three deadlines
+  deadline: "2021-10-15 23:59"
+  place: Pittsburgh, PA, USA
   tags: [SE]
 
 
