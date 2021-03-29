@@ -13,6 +13,18 @@
   place: Chengdu, China
   tags: [AI]
 
+- name: FG
+  year: 2021
+  date: "October 20 – 24 2021"
+  description: ACM Multimedia
+  link: https://2021.acmmm.org
+  # comment: Three deadlines
+  # deadline: Sun Apr 18 2021 19:59:59
+  deadline: "2021-04-15 23:59:00"
+  timezone: America/Los_Angeles
+  place: Chengdu, China
+  tags: [AI]
+
 # Security and Privacy
 - name: S&P (Oakland)
   year: 2022
