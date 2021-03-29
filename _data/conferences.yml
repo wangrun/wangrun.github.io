@@ -7,11 +7,9 @@
   description: IEEE Symposium on Security and Privacy
   link: https://www.ieee-security.org/TC/SP2022/
   comment: Three deadlines
-  deadline:
-    - "2021-04-15 23:59"
-    - "2021-08-19 23:59"
-    - "2021-12-02 23:59"
-  place: San Francisco, California, USA
+  deadline: Sun Apr 18 2021 19:59:59
+  timezone: GMT+0800
+  place: Chengdu, China
   tags: [AI]
 
 # Security and Privacy
