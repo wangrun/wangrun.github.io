@@ -1,29 +1,38 @@
 ---
 
 # Artificial Intelligence
-- name: ACM MM (MM)
+- name: ACM MM (MM'21)
   year: 2021
   date: "October 20 – 24 2021"
-  description: ACM Multimedia
+  description: the 29th ACM International Conference on Multimedia
   link: https://2021.acmmm.org
   # comment: Three deadlines
   # deadline: Sun Apr 18 2021 19:59:59
   deadline: "2021-04-17 23:59:59"
-  timezone: UTC
+  timezone: UTC-12
   place: Chengdu, China
   tags: [AI]
 
-- name: FG
+- name: NeurIPS
   year: 2021
-  date: "October 20 – 24 2021"
-  description: ACM Multimedia
-  link: https://2021.acmmm.org
-  # comment: Three deadlines
-  # deadline: Sun Apr 18 2021 19:59:59
-  deadline: "2021-04-15 23:59:00"
+  date: "December 5-14, 2021"
+  description: Thirty-fifth Conference on Neural Information Processing Systems
+  link: https://neurips.cc/Conferences/2021/
+  deadline: '2021-05-26 13:00:00'
   timezone: America/Los_Angeles
-  place: Chengdu, China
-  tags: [AI]
+  place: Online
+  tag: [AI]
+
+
+- name: AAAI (TBD)
+  year: 2022
+  date: "December 5-14, 2021"
+  description: The Thirty-sixth Conference on Artificial Intelligence (AAAI-22)
+  link: https://neurips.cc/Conferences/2021/
+  deadline: '2021-05-26 13:00:00'
+  timezone: America/Los_Angeles
+  place: Online
+  tag: [AI]
 
 # Security and Privacy
 - name: S&P (Oakland)
@@ -62,6 +71,18 @@
   comment: 3 review cycles
   date: "August 10-12"
   place: Boston, MA, USA.
+  tags: [SEC]
+
+- name: NDSS
+  description: ISOC Network and Distributed System Security Symposium
+  year: 2021
+  link: https://www.ndss-symposium.org/ndss-2021/
+  comment: 2 review cycles
+  deadline:
+    - "2020-04-30 23:59"
+    - "2020-07-31 23:59"
+  date: February 21-24
+  place: San Diego, CA, USA
   tags: [SEC]
 
 
