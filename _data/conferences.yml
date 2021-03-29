@@ -8,8 +8,8 @@
   link: https://2021.acmmm.org
   # comment: Three deadlines
   # deadline: Sun Apr 18 2021 19:59:59
-  deadline: "2021-04-18 19:59:59"
-  timezone: Etc/GMT+8
+  deadline: "2021-04-17 23:59:59"
+  timezone: UTC-12
   place: Chengdu, China
   tags: [AI]
 
