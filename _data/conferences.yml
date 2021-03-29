@@ -9,7 +9,7 @@
   # comment: Three deadlines
   # deadline: Sun Apr 18 2021 19:59:59
   deadline: "2021-04-17 23:59:59"
-  timezone: UTC-12
+  timezone: UTC
   place: Chengdu, China
   tags: [AI]
 
