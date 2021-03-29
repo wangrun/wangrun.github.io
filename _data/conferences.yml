@@ -2,13 +2,14 @@
 
 # Artificial Intelligence
 - name: ACM MM (MM)
-  year: 2022
-  date: "May 22 – 26 2022"
-  description: IEEE Symposium on Security and Privacy
-  link: https://www.ieee-security.org/TC/SP2022/
-  comment: Three deadlines
-  deadline: Sun Apr 18 2021 19:59:59
-  timezone: GMT+0800
+  year: 2021
+  date: "October 20 – 24 2021"
+  description: ACM Multimedia
+  link: https://2021.acmmm.org
+  # comment: Three deadlines
+  # deadline: Sun Apr 18 2021 19:59:59
+  deadline: "2021-04-17 23:59:59"
+  timezone: Etc/GMT+8
   place: Chengdu, China
   tags: [AI]
 
