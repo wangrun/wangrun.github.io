@@ -40,7 +40,8 @@ body {
     background: white;
     text-align: left;
     vertical-align: top;
-    width:950px;
+    /* width:950px; */
+    width:1024px;
     margin: auto;
 }
 
