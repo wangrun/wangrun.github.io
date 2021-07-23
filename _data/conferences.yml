@@ -32,7 +32,7 @@
   # timezone: UTC-12
   place: Vancouver, Canada
   tags: [AI]
-  comment: '<b>NOTE</b>: Mandatory abstract deadline on August 30, 2021'
+  comment: Mandatory abstract deadline on August 30, 2021
 
 - name: CVPR
   year: 2022
@@ -52,9 +52,9 @@
   deadline: '2021-10-21 23:59:59'
   abstract_deadline: '2021-10-14 23:59:59'
   # timezone: UTC-12
-    place: Lyon, France
+  place: Lyon, France
   tags: [AI]
-  comment: '<b>NOTE</b>: Mandatory abstract deadline on October 12, 2020'
+  comment: Mandatory abstract deadline on October 12, 2020
 
 # Security and Privacy
 - name: S&P (Oakland)
