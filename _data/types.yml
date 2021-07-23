@@ -5,6 +5,8 @@
   tag: SEC
 - name: Software Engineering
   tag: SE
+- name: Data Mining
+  sub: DM
 - name: Funding
   tag: FUND
 - name: Affairs

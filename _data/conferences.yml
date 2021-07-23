@@ -24,14 +24,25 @@
   tags: [AI]
 
 
-- name: AAAI (TBD)
+# - name: AAAI (TBD)
+#   year: 2022
+#   date: "December 5-14, 2021"
+#   description: The Thirty-sixth Conference on Artificial Intelligence (AAAI-22)
+#   link: https://neurips.cc/Conferences/2021/
+#   deadline: "2021-05-26 13:00:00"
+#   timezone: America/Los_Angeles
+#   place: Online
+#   tags: [AI]
+
+- title: AAAI
   year: 2022
-  date: "December 5-14, 2021"
+  date: "February 22 - March 1, 2022"
   description: The Thirty-sixth Conference on Artificial Intelligence (AAAI-22)
-  link: https://neurips.cc/Conferences/2021/
-  deadline: "2021-05-26 13:00:00"
-  timezone: America/Los_Angeles
-  place: Online
+  link: https://aaai.org/Conferences/AAAI-22/
+  deadline: '2021-09-08 23:59:59'
+  abstract_deadline: '2021-08-30 23:59:59'
+  timezone: UTC-12
+  place: Vancouver, Canada
   tags: [AI]
 
 # Security and Privacy
