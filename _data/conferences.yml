@@ -32,29 +32,29 @@
   # timezone: UTC-12
   place: Vancouver, Canada
   tags: [AI]
-  note: '<b>NOTE</b>: Mandatory abstract deadline on August 30, 2021'
+  comment: '<b>NOTE</b>: Mandatory abstract deadline on August 30, 2021'
 
 - name: CVPR
   year: 2022
+  date: June 21-24, 2022
   description: Conference on Computer Vision and Pattern Recognition
   link: http://cvpr2022.thecvf.com/
   deadline: '2021-11-16 23:59:59'
   # timezone: America/Los_Angeles
-  date: June 21-24, 2022
   place: New Orleans, Louisiana, USA
   tags: [AI]
 
 - name: WWW
   year: 2022
+  date: April 25-29, 2022
   description: International World Wide Web Conferences
   link: https://www2022.thewebconf.org/
   deadline: '2021-10-21 23:59:59'
   abstract_deadline: '2021-10-14 23:59:59'
   # timezone: UTC-12
-  date: April 25-29, 2022
-  place: Lyon, France
+    place: Lyon, France
   tags: [AI]
-  note: '<b>NOTE</b>: Mandatory abstract deadline on October 12, 2020'
+  comment: '<b>NOTE</b>: Mandatory abstract deadline on October 12, 2020'
 
 # Security and Privacy
 - name: S&P (Oakland)
