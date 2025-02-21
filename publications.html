@@ -3,6 +3,21 @@
       lang="en">
 <head>
     <style>
+        /* 设置列表项的序号 */
+        [role="list"] {
+            list-style-type: none; /* 去除默认的列表符号 */
+        }
+
+        .hover-scale {
+            counter-increment: publication; /* 为每个 listitem 增加一个计数器 */
+        }
+
+        .publication-number::before {
+            content: counter(publication) ". "; /* 在每个标题前插入自动生成的序号 */
+            font-weight: bold;
+        }
+
+
         .w-dyn-items {
 
             font-size: 20px;
@@ -56,6 +71,34 @@
 
         .hover-color:hover {
             color: #8c0404; /* 悬停时的颜色 */
+        }
+        .hover-scale {
+            display: none; /* 默认隐藏所有项目 */
+        }
+        .hover-scale.visible {
+            display: block; /* 通过添加类名显示项目 */
+        }
+        /* 按钮的样式 */
+        #see-more-btn, #see-less-btn {
+            margin-top: 20px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            color: #007BFF;
+            text-decoration: underline;
+            border: none;
+            background: none;
+        }
+        #see-more-btn:hover, #see-less-btn:hover {
+            color: #003f85;font-size: 22px
+        }
+        #see-less-btn {
+            display: none; /* "See Less" 按钮初始隐藏 */
+        }
+        /* 居中容器 */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
     <meta charset="utf-8"/>
@@ -114,40 +157,119 @@
         <div class="w-layout-hflex heading-wrapper"><h1 id="w-node-_25ff5c5c-e11e-cc86-3e11-7c1a4640db2e-dbb7965a"
                                                         class="text-primary-color" style="font-size: 22px">
             Selected Publications</h1></div>
-        <div class="inline" style="font-size: 20px"><b>* Corresponding Author; # Co-First Author;__Students advised</b>
         </div>
         <br>
-        <div class="inline" style="font-size: 20px">A complete list can be found in
-            <a class="hover-color" href="https://scholar.google.com/citations?user=LpuwwNUAAAAJ&hl=en">[Google Scholar]</a>
+        <div class="inline" style="font-size: 20px; position: absolute; top: 9.0rem">A complete list can be found in
+            <a class="hover-color" href="https://scholar.google.com/citations?user=LpuwwNUAAAAJ&hl=en">[Google
+                Scholar]</a>
         </div>
         <div class="w-dyn-list">
-            <div role="list" class="w-dyn-items" style="width: 1155px">
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">1.
-                    <a class="hover-color">TraceEvader: Making DeepFakes More Untraceable via Evading the Forgery Model
-                        Attribution</a>
+            <div role="list" class="w-dyn-items" style="counter-reset: publication;width: 1157px">
+                <div role="listitem" class="hover-scale w-dyn-item" ><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Perception-guided Jailbreak against Text-to-Image Models</a>
                     <img src="/static/img/new.gif"><span style="float: right;color: red">[CCF-A]</span>
                 </h4>
-                    <div id="authors-script"><u>Mengjie Wu</u>, <u>Jingui Ma</u>, <b>Run Wang*</b>, <u>Sidan Zhang</u>,
-                        <u>Boheng Li</u>,
+                    <div id="authors-script">Yihao Huang, Le Liang,Tianlin Li, Xiaojun
+                        Jia,<b>Run Wang</b>,Weikai Miao, Geguang Pu,
+                        Yang Liu,
+                    </div>
+                    <div>AAAI Conference on Artificial Intelligence(AAAI), 2025
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Transfer Learning of Real Image Features with Soft Contrastive Loss for Fake
+                        Image Detection</a>
+                     <span style="float: right;color: red">[CCF-A]</span>
+                </h4>
+                    <div id="authors-script">Ziyou Liang, Weifeng Liu, <b>Run Wang</b>, Mengjie Wu, Boheng Li, Yuyang
+                        Zhang, Lina Wang, Xinyi Yang
+                    </div>
+                    <div>AAAI Conference on Artificial Intelligence(AAAI), 2025
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Towards Reliable Verification of Unauthorized Data Usage in Personalized
+                        Text-to-Image Diffusion Models</a>
+                    <span style="float: right;color: red">[CCF-A]</span>
+                </h4>
+                    <div id="authors-script">Boheng Li, Yanhao Wei, Yankai Fu, Zhenting Wang, Yiming Li, Jie Zhang, <b>Run
+                        Wang</b>, Tianwei Zhang
+                    </div>
+                    <div>The IEEE Symposium on Security and Privacy (IEEE S&P), 2025
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Purifying Quantization-conditioned Backdoors via Layer-wise Activation with
+                        Distribution Correction</a><br>
+                     <a class="hover-color">Approximation </a>
+                     <span style="float: right;color: red">[CCF-A]</span>
+                </h4>
+                    <div id="authors-script">Boheng Li, Yishuo Cai, Jisong Cai, Yiming Li, Han Qiu, <b>Run Wang</b>,
+                        Tianwei Zhang
+                    </div>
+                    <div>The International Conference on Machine Learning (ICML), 2024
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Lips Are Lying: Spotting the Temporal Inconsistency between Audio and Visual
+                        in Lip-Syncing DeepFakes</a>
+                    <span style="float: right;color: red">[CCF-A]</span>
+                </h4>
+                    <div id="authors-script">Weifeng Liu, Tianyi She, Jiawei Liu, Boheng Li, Dongyu Yao, Ziyou Liang,
+                        <b>Run Wang</b>
+                    </div>
+                    <div>Annual Conference on Neural Information Processing Systems (NeurIPS), 2024
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">Hard Adversarial Example Mining for Improving Robust Fairness</a>
+                </h4>
+                    <div id="authors-script">Chenhao Lin, Xiang Ji, Yulong Yang, Qian Li, Zhengyu Zhao, Zhe Peng
+                        <b>Run Wang</b>, Liming Fang, Chao Shen
+                    </div>
+                    <div> IEEE Transactions on Information Forensics and Security(IEEE TIFS), 2024
+                    </div>
+                </div>
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span>
+                    <a class="hover-color">TraceEvader: Making DeepFakes More Untraceable via Evading the Forgery Model
+                        Attribution</a>
+                    <span style="float: right;color: red">[CCF-A]</span>
+                </h4>
+                    <div id="authors-script">Mengjie Wu, Jingui Ma, <b>Run Wang</b>,Sidan Zhang,
+                        Boheng Li,
                         Chenhao Lin,Liming Fang, Lina Wang
                     </div>
                     <div><a class="hover-color" href="https://aaai.org/aaai-conference/">The 38th Annual AAAI Conference
                         on Artificial
                         Intelligence (AAAI’24) </a>, Vancouver, Canada
                     </div>
-                    <div>(Acceptance rate: 2342/9862=23.75%) Accepted to appear</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">2.<a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color"> Free
                     Fine-tuning: A Plug-and-Play
                     Watermarking Scheme for Deep
-                    Neural Networks</a> <img src="/static/img/new.gif"><span
+                    Neural Networks</a>
+                    <span
                         style="float: right;color: red">[CCF-A]</span>
                 </h4>
-                    <div id="authors-script"><b>Run Wang</b>, <u>Jixing Ren</u>, <u>Boheng Li</u>, <u>Tianyi She</u>,
-                        <u>Wenhui Zhang</u>, Liming
+                    <div id="authors-script"><b>Run Wang</b>, Jixing Ren, Boheng Li, Tianyi She,
+                        Wenhui Zhang, Liming
                         Fang,
                         Jing Chen, Lina Wang
                     </div>
@@ -155,15 +277,15 @@
                         Conference on
                         Multimedia (ACM MM’23) </a>, Ottawa, Canada
                     </div>
-                    <div>(Acceptance rate: 902/3078=29.3%) Accepted to appear</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">3. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color">What can
                     Discriminator do? Towards Box-free Ownership
-                    Verification of Generative Adversarial Networks</a><img src="/static/img/new.gif"><span
+                    Verification of Generative Adversarial Networks</a><span
                         style="float: right;color: red">[CCF-A]</span></h4>
-                    <div id="authors-script"><u>Ziheng Huang</u>#, <u>Boheng Li</u>#, <u>Yan Cai</u>, <b>Run Wang</b>*,
+                    <div id="authors-script">Ziheng Huang#, Boheng Li#, Yan Cai, <b>Run Wang</b>,
                         Shangwei Guo, Liming
                         Fang,
                         Jing Chen, Lina Wang.
@@ -172,17 +294,18 @@
                         Vision
                         (ICCV’23) </a>, Paris, France
                     </div>
-                    <div>(Acceptance rate: 690/2473=27.9%) Accepted to appear</div>
+
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">4. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color">Rethinking
                     the
                     Vulnerability of DNN Watermarking: Are Watermarks Robust against Naturalness-aware
                     Perturbations?</a>
                     <span style="float: right;color: red">[CCF-A]</span>
                 </h4>
-                    <div id="authors-script"><b>Run Wang</b>, <u>Haoxuan Li</u>,<u> Lingzhou Mu</u>, <u>Jixing Ren</u>,
+                    <div id="authors-script"><b>Run Wang</b>, Haoxuan Li,Lingzhou Mu,Jixing Ren,
                         Shangwei Guo, Li Liu,
                         Liming
                         Fang, Jing Chen, Lina Wang.
@@ -191,16 +314,16 @@
                         Conference on
                         Multimedia (ACM MM’22) </a>, Lisbon, Portugal
                     </div>
-                    <div>(Acceptance rate: 690/2473=27.9%) Accepted to appear</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">5. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color">Anti-Forgery:
                     Towards a Stealthy and Robust DeepFake
                     Disruption
                     Attack via Adversarial Perceptual-aware Perturbations</a><span
                         style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script"><b>Run Wang</b>, <u>Ziheng Huang</u>, Zhikai Chen, Li Liu, Jing Chen, Lina
+                    <div id="authors-script"><b>Run Wang</b>, Ziheng Huang, Zhikai Chen, Li Liu, Jing Chen, Lina
                         Wang.
                     </div>
                     <div><a class="hover-color" href="https://ijcai-22.org/" target="_blank">Proceedings of the 31st
@@ -208,47 +331,49 @@
                         Conference on Artificial Intelligence (IJCAI’22)</a> ,
                         Vienna, Austria
                     </div>
-                    <div>(Acceptance rate: 15%)</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">6. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color">MetaFinger:
                     Fingerprinting the Deep Neural Networks with
                     Meta-training</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script"><u>Kang Yang</u>, <b>Run Wang</b>*, Lina Wang.
+                    <div id="authors-script">Kang Yang, <b>Run Wang</b>, Lina Wang.
                     </div>
                     <div><a class="hover-color" href="https://ijcai-22.org/" target="_blank">Proceedings of the 31st
                         International Joint
                         Conference on Artificial Intelligence (IJCAI’22)</a>,
                         Vienna, Austria
                     </div>
-                    <div>(Acceptance rate: 15%)</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">7.<a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color"
                         href="https://link.springer.com/article/10.1007/s11263-022-01606-8" target="_blank"> Countering
                     Malicious DeepFakes: Survey, Battleground, and
                     Horizon</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script">Felix Juefei-Xu, <b>Run Wang</b>*, Yihao Huang, Qing Guo, Lei Ma, Yang Liu.
+                    <div id="authors-script">Felix Juefei-Xu, <b>Run Wang</b>, Yihao Huang, Qing Guo, Lei Ma, Yang Liu.
                     </div>
                     <div><a class="hover-color">International Journal of Computer Vision (IJCV) 2022</a></div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">8. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color"
                         href="https://ieeexplore.ieee.org/document/9557814" target="_blank">Towards a
                     Robust Deep Neural Network against Adversarial
                     Texts: A
                     Survey</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script"><u>Wenqi Wang</u>, <b>Run Wang</b>*, Lina Wang, Zhibo Wang, Aoshuang Ye.
+                    <div id="authors-script">Wenqi Wang, <b>Run Wang</b>, Lina Wang, Zhibo Wang, Aoshuang Ye.
                     </div>
                     <div><a class="hover-color" target="_blank"
                             href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69">IEEE
                         Transactions on Knowledge and Data Engineering (TKDE) 2021</a></div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">9. <a
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
                         class="hover-color"
                         href="https://arxiv.org/abs/2009.09869" target="_blank">FakeTagger:
                     Robust Safeguards against DeepFake Dissemination
@@ -260,14 +385,15 @@
                         Conference on
                         Multimedia (ACM MM’21)</a>, Chengdu, China.
                     </div>
-                    <div>(Acceptance rate: 542/1942 = 27.9%)</div>
                     <div><span style="color: darkred">Media coverage</span>: <a class="hover-color" target="_blank"
                                                                                 href="https://www.unite.ai/identifying-deepfake-data-sources-with-ai-based-tagging-faketagger/">Unit.AI</a>,
                         <a class="hover-color" target="_blank" href="https://mp.weixin.qq.com/s/3KOJPW0JQKx3z3WEu4-B-Q">新智元</a>.
                     </div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">10.<a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         target="_blank" href="https://wangrun.github.io/paper/DeepSonar-MM20.pdf"> DeepSonar:
                     Towards Effective and Robust Detection of
                     AI-Synthesized Fake Voices</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
@@ -275,14 +401,16 @@
                         Ma, Yang
                         Liu.
                     </div>
-                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM International Conference
+                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM
+                        International Conference
                         on Multimedia (ACM MM’20)</a>, Seattle, USA.
-                    </div>
-                    <div>(Oral Acceptance rate: 151/1698 = 8.8%) <span style="color: red">(Oral Presentation)</span>
+                        <span style="color: red">(Oral Presentation)</span>
                     </div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">11. <a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         target="_blank" href="https://wangrun.github.io/paper/Amora-MM20.pdf">Amora:
                     Black-box Adversarial Morphing Attack</a><span
                         style="float: right;color: red">[CCF-A]</span></h4>
@@ -290,44 +418,49 @@
                         Ma, Yang
                         Liu.
                     </div>
-                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM International Conference
-                        on Multimedia (ACM MM’20)</a>, Seattle, USA.
-                    </div>
-                    <div>(Oral Acceptance rate: 151/1698 = 8.8%) <span style="color: red">(Oral Presentation)</span>
+                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM
+                        International Conference
+                        on Multimedia (ACM MM’20)</a>, Seattle, USA. <span style="color: red">(Oral Presentation)</span>
                     </div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">12. <a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         target="_blank" href="https://wangrun.github.io/paper/FakePolisher-MM20.pdf">FakePolisher:
                     Making DeepFakes More Detection-Evasive by
                     Shallow
                     Reconstruction</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script"><u>Yihao Huang</u>, Felix Juefei-Xu,<b>Run Wang</b>*, Qing Guo, Lei Ma,
+                    <div id="authors-script">Yihao Huang, Felix Juefei-Xu,<b>Run Wang</b>, Qing Guo, Lei Ma,
                         Xiaofei
                         Xie,
                         Jianwen Li, Weikai Miao, Yang Liu, Geguang Pu.
                     </div>
-                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM International Conference
+                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM
+                        International Conference
                         on Multimedia (ACM MM’20)</a>, Seattle, USA.
-                    </div>
-                    <div>(Oral Acceptance rate: 151/1698 = 8.8%) <span style="color: red">(Oral Presentation)</span>
+                         <span style="color: red">(Oral Presentation)</span>
                     </div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">13. <a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         href="https://wangrun.github.io/paper/MGAAttack-MM20.pdf" target="_blank">MGAttack:
                     Toward More Query-efficient Black-box Attack by
                     Microbial Genetic Algorithm</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
-                    <div id="authors-script">Lina Wang, <u>Kang Yang</u>,<u> Wenqi Wang</u>, <b>Run Wang</b>*, Aoshuang
+                    <div id="authors-script">Lina Wang, Kang Yang, Wenqi Wang, <b>Run Wang</b>, Aoshuang
                         Ye.
                     </div>
-                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM International Conference
+                    <div><a class="hover-color" href="https://2020.acmmm.org/index.html" target="_blank">28th ACM
+                        International Conference
                         on Multimedia (ACM MM’20)</a>, Seattle, USA.
                     </div>
-                    <div>(Acceptance rate: 472/1698 = 27.8%)</div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">14.<a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         target="_blank" href="https://wangrun.github.io/paper/FakeSpotter-IJCAI2020.pdf">
                     FakeSpotter:
                     A Simple yet Robust Baseline for Spotting
@@ -336,51 +469,36 @@
                         Wang and
                         Yang Liu.
                     </div>
-                    <div><a class="hover-color" href="https://ijcai20.org/" target="_blank">Proceedings of the 29th International Joint
+                    <div><a class="hover-color" href="https://ijcai20.org/" target="_blank">Proceedings of the 29th
+                        International Joint
                         Conference on Artificial Intelligence
                         (IJCAI’20)</a>,
                         Yokohama, Japan.
                     </div>
-                    <div>(Acceptance rate: 592/4717 = 12.6%)</div>
                     <div><span style="color: darkred">Media coverage</span>:<a class="hover-color" target="_blank"
                                                                                href="https://syncedreview.com/2019/09/23/ai-vs-ai-fakespotter-studies-neurons-to-bust-deepfakes/">
                         Synced Review</a>.
                     </div>
                 </div>
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication">15.<a class="hover-color"
+                <div role="listitem" class="hover-scale w-dyn-item visible"><h4 style="font-size: 20px"
+                                                                        class="text-title publication">
+                    <span class="publication-number"></span><a
+                        class="hover-color"
                         href="https://wangrun.github.io/paper/SmartPI-TMC2019.pdf" target="_blank"> SmartPI:
                     Understanding Permission Implications of Android
                     Apps
                     from User Reviews</a><span style="float: right;color: red">[CCF-A]</span></h4></a>
                     <div id="authors-script"><b>Run Wang</b>, Zhibo Wang, Benxiao Tang, Lei Zhao, Lina Wang.
                     </div>
-                    <div><a class="hover-color" target="_blank" href="https://ieeexplore.ieee.org/document/8798713">IEEE Transactions on
+                    <div><a class="hover-color" target="_blank" href="https://ieeexplore.ieee.org/document/8798713">IEEE
+                        Transactions on
                         Mobile Computing(TMC), 19(12), 2020: 2933-2945</a></div>
                 </div>
             </div>
-        </div>
+            <div class="button-container">
+            <span id="see-more-btn" style="font-size: 22px">See More</span>
+            <span id="see-less-btn" style="font-size: 22px">See Less</span>
     </div>
-</section>
-<section class="section">
-    <div class="w-layout-blockcontainer content-container w-container" style="position: relative;right: 3.0rem">
-        <div class="w-layout-hflex heading-wrapper"><h1 id="w-node-_25ff5c5c-e11e-cc86-3e11-7c1a4640db2e-dbb7965a"
-                                                        class="text-primary-color" style="font-size: 22px">
-            Manuscripts/Preprints</h1></div>
-        <div class="w-dyn-list">
-            <div role="list" class="w-dyn-items">
-                <div role="listitem" class="hover-scale w-dyn-item"><h4 style="font-size: 20px"
-                                                                        class="text-title publication"><a class="hover-color"
-                        target="_blank" href="https://arxiv.org/abs/2106.11760">A Novel
-                    Verifiable Fingerprinting Scheme for Generative
-                    Adversarial Networks</a></h4>
-                    <div id="authors-script">Guanlin Li, Guowen Xu, Han Qiu, Shangwei Guo, <b><u>Run Wang</u></b>, Jiwei
-                        Li, Tianwei
-                        Zhang.
-                    </div>
-                    <div>arXiv preprint arXiv:2106.11760, 2021.</div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -390,6 +508,42 @@
         <div class="footer-copyright">Designed and Developed by Zhihao Peng.</div>
     </div>
 </section>
+ <script>
+        // JavaScript 实现显示更多和显示更少功能
+        const items = document.querySelectorAll('.hover-scale');
+        const seeMoreBtn = document.getElementById('see-more-btn');
+        const seeLessBtn = document.getElementById('see-less-btn');
+
+        let visibleCount = 20; // 默认显示3个项目
+
+        // 初始化，显示前3个项目
+        function showInitialItems() {
+            items.forEach((item, index) => {
+                if (index < visibleCount) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
+        }
+
+        // 显示更多项目
+        seeMoreBtn.addEventListener('click', () => {
+            items.forEach(item => item.classList.add('visible')); // 显示所有项目
+            seeMoreBtn.style.display = 'none'; // 隐藏“See More”按钮
+            seeLessBtn.style.display = 'inline'; // 显示“See Less”按钮
+        });
+
+        // 显示更少项目
+        seeLessBtn.addEventListener('click', () => {
+            showInitialItems(); // 只显示前3个项目
+            seeMoreBtn.style.display = 'inline'; // 显示“See More”按钮
+            seeLessBtn.style.display = 'none'; // 隐藏“See Less”按钮
+        });
+
+        // 页面加载时初始化
+        showInitialItems();
+    </script>
 <script>
     function backToTop() {
         document.body.scrollTop = 0;
