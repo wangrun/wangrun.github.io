@@ -88,315 +88,6 @@
     <meta content="Webflow" name="generator"/>
     <link href="https://assets-global.website-files.com/64f4d663be17b6544a586bac/css/mit-hanlab.webflow.e1fbf23d6.min.css"
           rel="stylesheet" type="text/css"/>
-    <style>
-        :root {
-            --people-ink: #111827;
-            --people-muted: #667085;
-            --people-accent: var(--mit-red, #a31f34);
-            --people-panel: #f7f8fa;
-            --people-line: rgba(17, 24, 39, 0.1);
-            --people-gap: 18px;
-        }
-
-        .team-page { overflow-x: hidden; }
-
-        .team-page .team-page-container .divider {
-            width: 100% !important;
-            border-color: var(--people-line);
-        }
-
-        .team-page .team-page-container .w-dyn-items { max-width: 100%; }
-
-        .team-page .team-page-main {
-            width: calc(100% + 7rem);
-            max-width: none;
-        }
-
-        .team-page .team-page-container > .divider {
-            width: calc(100% + 7rem) !important;
-        }
-
-        .team-page .team-group {
-            position: static !important;
-            margin-top: 46px;
-        }
-
-        .team-page .team-group > h3 {
-            margin: 0 0 16px;
-            color: var(--people-ink);
-            font-family: "Open Sans", sans-serif;
-            font-size: 20px !important;
-            letter-spacing: -0.015em;
-        }
-
-        .team-page .people-carousel {
-            position: relative;
-            width: 100% !important;
-        }
-
-        .people-carousel__controls {
-            display: flex;
-            justify-content: flex-end;
-            gap: 9px;
-            margin: -48px 0 14px;
-        }
-
-        .people-carousel__arrow {
-            display: inline-grid;
-            width: 38px;
-            height: 38px;
-            padding: 0;
-            place-items: center;
-            border: 1px solid var(--people-line);
-            border-radius: 50%;
-            color: var(--people-ink);
-            background: rgba(255, 255, 255, 0.96);
-            box-shadow: 0 7px 20px rgba(15, 23, 42, 0.08);
-            cursor: pointer;
-            transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
-        }
-
-        .people-carousel__arrow:hover:not(:disabled) {
-            color: var(--people-accent);
-            border-color: rgba(163, 31, 52, 0.38);
-            transform: translateY(-2px);
-        }
-
-        .people-carousel__arrow:focus-visible,
-        .people-carousel__dot:focus-visible {
-            outline: 2px solid var(--people-accent);
-            outline-offset: 3px;
-        }
-
-        .people-carousel__arrow:disabled {
-            cursor: default;
-            opacity: 0.3;
-        }
-
-        .people-carousel__arrow svg {
-            width: 17px;
-            height: 17px;
-            fill: none;
-            stroke: currentColor;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 1.8;
-        }
-
-        .team-page .people-carousel__viewport {
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            overscroll-behavior-inline: contain;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            touch-action: pan-x pan-y pinch-zoom;
-            cursor: grab;
-        }
-
-        .team-page .people-carousel__viewport::-webkit-scrollbar { display: none; }
-
-        .team-page .people-carousel__viewport.is-dragging {
-            cursor: grabbing;
-            scroll-behavior: auto;
-            scroll-snap-type: none;
-            user-select: none;
-        }
-
-        .team-page .people-carousel__viewport.is-auto-playing {
-            scroll-behavior: auto;
-            scroll-snap-type: none;
-        }
-
-        .team-page .people-carousel__track {
-            display: flex !important;
-            width: max-content !important;
-            max-width: none !important;
-            min-width: 100%;
-            gap: var(--people-gap);
-            align-items: stretch;
-            padding: 3px 2px 17px;
-        }
-
-        .team-page .people-carousel__card.hover-scale {
-            display: flex !important;
-            flex: 0 0 min(30vw, 320px);
-            width: min(30vw, 320px);
-            min-width: 280px;
-            overflow: hidden;
-            scroll-snap-align: start;
-            border: 1px solid var(--people-line);
-            border-radius: 18px;
-            background: linear-gradient(145deg, #fff 0%, var(--people-panel) 100%);
-            box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
-            transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-        }
-
-        .team-page .people-carousel__card.hover-scale:hover {
-            border-color: rgba(163, 31, 52, 0.22);
-            box-shadow: 0 17px 40px rgba(15, 23, 42, 0.12);
-            transform: translateY(-3px);
-        }
-
-        .team-page .people-carousel__card > .w-layout-hflex {
-            display: flex !important;
-            width: 100%;
-            min-width: 0;
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .team-page .people-carousel__card .avatar-wrapper,
-        .team-page .people-carousel__card > .w-layout-hflex > div:first-child {
-            position: static !important;
-            box-sizing: border-box;
-            max-width: 280px !important;
-            height: 280px;
-            width: 280px !important;
-            margin: 18px auto 2px;
-            padding: 0;
-            overflow: hidden;
-            border: 0;
-            border-radius: 50%;
-            background: transparent;
-            box-shadow: none;
-        }
-
-        .team-page .people-carousel__card .avatar-large {
-            position: static !important;
-            display: block;
-            width: 100% !important;
-            height: 100% !important;
-            max-width: none !important;
-            max-height: none !important;
-            object-fit: contain;
-            object-position: center;
-            border-radius: 280px;
-            box-shadow: none;
-            pointer-events: none;
-            transform: none;
-        }
-
-        .team-page .people-carousel__card > .w-layout-hflex > div:last-child {
-            display: flex;
-            min-width: 0;
-            flex: 1;
-            flex-direction: column;
-            padding: 14px 18px 16px;
-        }
-
-        .team-page .people-carousel__card h4,
-        .team-page .people-carousel__card h4 a {
-            position: static !important;
-            margin: 0 !important;
-            color: var(--people-ink);
-            font-size: 18px !important;
-            font-weight: 700;
-            line-height: 1.3;
-            text-decoration: none;
-        }
-
-        .team-page .people-carousel__card h4 a:hover { color: var(--people-accent); }
-
-        .team-page .people-carousel__card p {
-            position: static !important;
-            display: block;
-            overflow: visible;
-            margin: 11px 0 0 !important;
-            color: var(--people-muted);
-            font-size: 14px !important;
-            line-height: 1.55;
-            text-align: justify;
-            text-align-last: left;
-            text-justify: inter-word;
-        }
-
-        .people-card__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: auto;
-            padding-top: 0;
-        }
-
-        .people-card__tag {
-            padding: 5px 8px;
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 999px;
-            color: #344054;
-            background: rgba(255, 255, 255, 0.84);
-            font-family: "Open Sans", sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            line-height: 1;
-        }
-
-        .people-carousel__pagination {
-            display: flex;
-            min-height: 9px;
-            justify-content: center;
-            gap: 6px;
-            margin-top: 1px;
-        }
-
-        .people-carousel__dot {
-            width: 6px;
-            height: 6px;
-            padding: 0;
-            border: 0;
-            border-radius: 999px;
-            background: #d0d5dd;
-            cursor: pointer;
-            transition: width 180ms ease, background-color 180ms ease;
-        }
-
-        .people-carousel__dot.is-active {
-            width: 21px;
-            background: var(--people-accent);
-        }
-
-        .team-page .button-container { display: none !important; }
-        .team-page .footer { top: auto !important; }
-
-        @media screen and (max-width: 991px) {
-            .team-page .team-page-main {
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .team-page .team-page-container > .divider {
-                width: 100% !important;
-            }
-
-            .team-page .people-carousel__card.hover-scale {
-                flex-basis: min(46vw, 310px);
-                width: min(46vw, 310px);
-                min-width: 280px;
-            }
-
-        }
-
-        @media screen and (max-width: 767px) {
-            .team-page .team-group { margin-top: 40px; }
-
-            .team-page .people-carousel__card.hover-scale {
-                flex-basis: min(82vw, 300px);
-                width: min(82vw, 300px);
-                min-width: 265px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .team-page .people-carousel__viewport,
-            .people-carousel__arrow,
-            .people-carousel__dot,
-            .team-page .people-carousel__card {
-                scroll-behavior: auto;
-                transition: none;
-            }
-        }
-    </style>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -406,7 +97,7 @@
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);</script>
 </head>
-<body class="team-page">
+<body>
 <div class="floating-window" onclick="backToTop()">&#8593;</div>
 <div class="navbar bg-white">
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
@@ -433,14 +124,14 @@
         </div>
     </div>
 </div>
-<section class="section team-page-section">
-    <div class="w-layout-blockcontainer content-container w-container team-page-container"
+<section class="section">
+    <div class="w-layout-blockcontainer content-container w-container"
          style="position: relative;right: 3.0rem;">
         <div class="w-layout-hflex heading-wrapper"><h1 id="w-node-_25ff5c5c-e11e-cc86-3e11-7c1a4640db2e-dbb7965a"
                                                         class="text-primary-color" style="font-size: 22px">
             Team</h1></div>
         <div class="divider" style="width: 1140px"></div>
-            <div class="team-page-main"><h2 style="font-size: 21px">Principle Investigator</h2>
+        <div><h2 style="font-size: 21px">Principle Investigator</h2>
             <div class="w-dyn-list">
                 <div role="list" class="w-dyn-items" style="width: 1120px">
                     <div role="listitem" class="w-dyn-item">
@@ -474,7 +165,7 @@
             </div>
             <div class="divider" style="width: 1140px"></div>
             <div><h2 style="font-size: 21px">Team Members</h2>
-                <div class="team-group"><h3 style="font-size: 20px">PhD Students</h3>
+                <div><h3 style="font-size: 20px">PhD Students</h3>
                     <div class="w-dyn-list" style="width: 1140px">
                         <div role="list" class="team-content w-dyn-items">
 
@@ -492,9 +183,12 @@
                                             Zhang (Fall
                                             2023)</a></h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:1.0rem">
-                                            Obtained his bachelor's degree from Wuhan University and has been pursuing
-                                            his PhD since Fall 2025. He is committed to developing a trustworthy AI
-                                            agent powered by large language models (LLMs) and securing T2I models.</p>
+                                            obtained his bachelor's degree from Wuhan University and has been pursuing
+                                            his PhD since Fall 2025. He is committed to developing a trustworthy and
+                                            efficient AI agent powered by large language models (LLMs) and multimodal
+                                            language models, while also exploring their potential for vulnerability
+                                            discovery. His academic excellence is underscored by being a three-time
+                                            recipient of national scholarships in 2019, 2022 and 2023.</p>
                                     </div>
                                 </div>
                             </div>
@@ -513,10 +207,13 @@
                                             (Fall
                                             2024)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2rem;max-width: 400px;top:1.0rem">
-                                            Obtained her master's degree from Nanjing University of Aeronautics and
+                                            obtained her master's degree from Nanjing University of Aeronautics and
                                             Astronautics and has been pursuing her PhD at Wuhan University since Fall
                                             2024, under the supervision of Pro. Lina Wang and Pro. Run Wang. She is
-                                            dedicated to AIGC safety.
+                                            dedicated to AIGC safety, focusing on creating effective measures to secure
+                                            Text-to-Image (T2I) model generation and exploring high-quality multi-modal
+                                            content generation. Her academic achievements include receiving the national
+                                            scholarship in 2023.
                                         </p></div>
                                 </div>
                             </div>
@@ -536,10 +233,9 @@
                                             (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2rem;max-width: 400px;top:1.0rem">
-                                            Obtained her master's degree from Zhengzhou University and has been
-                                            pursuing her PhD at Wuhan University since Fall 2025, under the supervision
-                                            of Pro. Lina Wang and Pro. Run Wang. She is currently interested in AI for
-                                            security, with a focus on vulnerability discovery and analysis.
+                                            obtained her master's degree from Zhengzhou University and has been pursuing 
+                                            her PhD at Wuhan University since Fall 2025, under the supervision of Pro. Lina Wang 
+                                            and Pro. Run Wang. She is currently interested in AI for security, with a focus on vulnerability discovery and analysis.
                                         </p></div>
                                 </div>
                             </div>
@@ -559,7 +255,9 @@
                                             (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2rem;max-width: 400px;top:1.0rem">
-                                            Researches the application of AI to vulnerability discovery.
+                                            obtained his master's degree from Xi'an Jiaotong University and has been pursuing 
+                                            his PhD at Wuhan University since Fall 2025, under the supervision of Pro. Lina Wang 
+                                            and Pro. Run Wang. His current interest is exploring the potential of AI in vulnerability discovery.
                                         </p></div>
                                 </div>
                             </div> -->
@@ -567,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-group"><h3 style="font-size: 20px">Master Students</h3>
+                <div><h3 style="font-size: 20px">Master Students</h3>
                     <div class="w-dyn-list" style="width: 1140px">
                         <div role="list" class="team-content w-dyn-items">
 
@@ -584,7 +282,10 @@
                                             2022)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2rem;max-width: 400px">
 
-                                            Researches vulnerabilities in DeepFake detectors.</p></div>
+                                            earned her bachelor's degree from Wuhan University and is presently engaged
+                                            in researching the vulnerabilities of DeepFake detectors. Her significant
+                                            academic contributions include the publication of a high-impact paper in a
+                                            top-tier conference, specifically AAAI in 2024.</p></div>
                                 </div>
                             </div>
 
@@ -599,7 +300,8 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem">Wei Wang (Fall
                                             2022)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px">
-                                            Researches real-time DeepFake defense strategies.</p></div>
+                                            earned his bachelor's degree from Wuhan University and is presently engaged
+                                            in pioneering work on real-time DeepFake defense strategies.</p></div>
                                 </div>
                             </div>
 
@@ -617,10 +319,35 @@
                                             (Fall
                                             2022)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2rem;max-width: 400px;top:1.0rem">
-                                            Researches multimodal DeepFake detection.</p></div>
+                                            obtained his bachelor's degree from Wuhan University and is now actively
+                                            involved in the field of multimodal DeepFake detection. His academic prowess
+                                            is highlighted by his publication of a top-tier paper in AAAI'24.</p></div>
                                 </div>
                             </div> -->
 
+                            <div role="listitem" class="hover-scale w-dyn-item">
+                                <div class="w-layout-hflex">
+                                    <div class="avatar-wrapper"
+                                         style="width: 7.5rem;max-width: 7.5rem;position: relative;left: 1.5rem">
+                                        <img alt=""
+                                             loading="lazy"
+                                             style="position: relative;top:1.5rem"
+                                             src="/static/img/Wei Xu.png"
+                                             sizes="80px"
+                                             class="avatar-large"/>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 20px;position: relative;left: 2.5rem;top:1.5rem">Wei Xu
+                                            (Fall
+                                            2023)</h4>
+                                        <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:1.5rem">
+                                            earned her bachelor's degree from Shanghai Jiaotong University has been
+                                            pursuing his master's degree since Fall 2023. She is currently conducting
+                                            cutting-edge research on the alignment and red-teaming of Language Models
+                                            (LM), Vision-Language Models (VLM), and Text-to-Image Models.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div role="listitem" class="hover-scale w-dyn-item">
                                 <div class="w-layout-hflex">
                                     <div class="avatar-wrapper"
@@ -635,8 +362,9 @@
                                             (Fall
                                             2024)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.0rem;max-width: 400px;top:1.5rem">
-                                            Researches vulnerability discovery and exploitation, focusing on edge
-                                            devices, vector databases, and related systems.</p>
+                                            earned his bachelor's degree from Wuhan University and is currently involved
+                                            in advanced research in vulnerability discovery and exploitation, with a
+                                            specific focus on edge devices, vector databases, and related areas.</p>
                                     </div>
                                 </div>
                             </div>
@@ -656,8 +384,10 @@
                                             (Fall
                                             2024)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:2.5rem">
-                                            Researches the security and privacy of multimodal large models, including
-                                            backdoor attacks and jailbreaking.</p>
+                                            obtained his bachelor's degree from Wuhan University and has been pursuing
+                                            his master's degree since Fall 2024. His research focuses on the security
+                                            and privacy of multimodal large models, including backdoor attacks and
+                                            jailbreaking.</p>
                                     </div>
                                 </div>
                             </div>
@@ -674,9 +404,9 @@
                                             Nian (Fall
                                             2024)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Obtained his bachelor's degree from Wuhan University and has been pursuing
-                                            his PhD since Fall 2026. He is currently involved in advanced research in
-                                            vulnerability discovery and exploitation.</p>
+                                            earned his bachelor's degree from Wuhan University and is currently involved
+                                            in advanced research in vulnerability discovery and exploitation, with a
+                                            specific focus on edge devices, vector databases, and related areas.</p>
                                     </div>
                                 </div>
                             </div>
@@ -694,8 +424,9 @@
                                             Sun (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches vulnerability discovery and exploitation, focusing on edge
-                                            devices, vector databases, and related systems.</p>
+                                            obtained his bachelor's degree from Wuhan University and is currently involved in advanced research
+                                            in vulnerability discovery and exploitation, with a specific focus on edge
+                                            devices, vector databases, and related areas. </p>
                                     </div>
                                 </div>
                             </div>
@@ -712,7 +443,8 @@
                                             Wei (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches the security and safety of Text-to-Image models.</p>
+                                            obtained his bachelor's degree from Wuhan University and is committed to advancing research on the
+                                            security and safety of text-to-image models.</p>
                                     </div>
                                 </div>
                             </div>
@@ -730,8 +462,9 @@
                                             Zhao (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches security issues in Text-to-Image models such as Stable Diffusion,
-                                            including copyright protection and unsafe-content risks.</p>
+                                            obtained his bachelor's degree from Wuhan University and is currently dedicated to security issues in
+                                            text-to-image models like Stable Diffusion, exploring copyright protection
+                                            and NSFW (Not Safe For Work) concerns.</p>
                                     </div>
                                 </div>
                             </div>
@@ -748,8 +481,7 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem;top:3.0rem">Shaohan Xin (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches vulnerability discovery, exploitation, and related system
-                                            security topics.</p>
+                                            earned his bachelor's degree from Beijing Jiaotong University and is currently involved in advanced research in vulnerability discovery and exploitation and related areas.</p>
                                     </div>
                                 </div>
                             </div>
@@ -768,8 +500,8 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem;top:3.0rem">Jiahao Zhang (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches vulnerability discovery and exploitation, with a focus on system
-                                            vulnerabilities.
+                                            obtained his bachelor's degree from Wuhan University and is currently dedicated to 
+                                            vulnerability discovery and exploitation, with a particular interest in system vulnerabilities and related areas.
                                         </p>
                                     </div>
                                 </div>
@@ -788,7 +520,7 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem;top:3.0rem">Jiahui Wang (Fall
                                             2025)</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top:3.0rem">
-                                            Researches web vulnerability discovery and mining.
+                                            earned her bachelor's degree from Wuhan University of Science and Technology and is presently engaged in pioneering work on Web vulnerability mining.
                                         </p>
                                     </div>
                                 </div>
@@ -797,7 +529,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-group"><h3 style="font-size: 20px">Undergraduate Students</h3>
+                <div style="position: relative;top:5.5rem"><h3 style="font-size: 20px">Undergraduate Students</h3>
                     <div class="w-dyn-list">
                         <div role="list" class="team-content w-dyn-items" style="width: 1140px">
                             <div role="listitem" class="hover-scale w-dyn-item">
@@ -830,7 +562,7 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem;position: relative;top: 2.0rem">
                                             Jiaxi Qiu</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;position: relative;top: 2.0rem">
-                                            Researches AI security and privacy.</p>
+                                            working on AI Security and Privacy</p>
                                     </div>
                                 </div>
                             </div>
@@ -896,14 +628,14 @@
                                         <h4 style="font-size: 20px;position: relative;left: 2.5rem;top: 6.0rem">Xudong
                                             Jiang</h4>
                                         <p style="font-size: 20px;position: relative;left: 2.5rem;max-width: 400px;top: 6.0rem">
-                                            Researches AI security and privacy.</p>
+                                            working on AI Security and Privacy</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-group"><h3 style="font-size: 20px">Alumni</h3>
+                <div style="position: relative;top: 16rem"><h3 style="font-size: 20px">Alumni</h3>
                     <div class="w-dyn-list" style="width: 1140px">
                         <div role="list" class="team-content w-dyn-items">
                             <div role="listitem" class="hover-scale w-dyn-item">
@@ -1176,24 +908,6 @@
                                         <img alt=""
                                              loading="lazy"
                                              style="position: relative;top: 2.4rem"
-                                             src="/static/img/Wei Xu.png"
-                                             sizes="80px"
-                                             class="avatar-large"/>
-                                    </div>
-                                    <div>
-                                        <h4 style="font-size: 20px;position: relative;left: 3rem;top: 3rem">Wei Xu</h4>
-                                        <p style="font-size: 20px;position: relative;left: 3rem;max-width: 400px;top: 3rem">
-                                            Master Student (Fall 2023-Fall 2026) → Alibaba</p></div>
-                                </div>
-                            </div>
-
-                            <div role="listitem" class="hover-scale w-dyn-item visible">
-                                <div class="w-layout-hflex" style="position: relative;top: 1.2rem">
-                                    <div class="avatar-wrapper"
-                                         style="position: relative;left:1.5rem;width: 7.5rem;max-width: 7.5rem">
-                                        <img alt=""
-                                             loading="lazy"
-                                             style="position: relative;top: 2.4rem"
                                              src="/static/img/Ziyou Liang.png"
                                              sizes="80px"
                                              class="avatar-large"/>
@@ -1276,259 +990,6 @@
 
     // 页面加载时初始化
     showInitialItems();
-</script>
-<script>
-    (function () {
-        "use strict";
-
-        var arrowIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>';
-        var tagRules = [
-            [/agent|tool-use|mcp|large language model|\bllm/i, "Agent Security"],
-            [/generative|aigc|diffusion|text-to-image/i, "Generative AI"],
-            [/deepfake|forgery|face/i, "Deepfake Defense"],
-            [/vulnerab|program analysis|software|web security/i, "Vulnerability Discovery"],
-            [/privacy|unlearning|extraction/i, "Privacy"],
-            [/adversarial|attack|defen|security/i, "AI Security"],
-            [/multimodal|vision.language|\bvlm/i, "Multimodal AI"],
-            [/efficient|optimization/i, "Efficient AI"]
-        ];
-
-        function getGroupLabel(track) {
-            var group = track.closest(".team-group");
-            var heading = group ? group.querySelector("h3") : null;
-            return heading ? heading.textContent.trim() : "People";
-        }
-
-        function getTags(card) {
-            var tags = [];
-            tagRules.forEach(function (rule) {
-                if (rule[0].test(card.textContent) && tags.length < 3) tags.push(rule[1]);
-            });
-            if (!tags.length) tags.push("Cybersecurity", "Trustworthy AI");
-            return tags;
-        }
-
-        function enrichCard(card) {
-            card.classList.add("people-carousel__card");
-            var content = card.querySelector(".w-layout-hflex > div:last-child");
-            if (!content || !content.querySelector("h4")) return;
-
-            var tags = document.createElement("div");
-            tags.className = "people-card__tags";
-            tags.setAttribute("aria-label", "Research areas");
-            getTags(card).forEach(function (label) {
-                var tag = document.createElement("span");
-                tag.className = "people-card__tag";
-                tag.textContent = label;
-                tags.appendChild(tag);
-            });
-            content.appendChild(tags);
-        }
-
-        function createButton(direction, label) {
-            var button = document.createElement("button");
-            button.type = "button";
-            button.className = "people-carousel__arrow people-carousel__arrow--" + direction;
-            button.setAttribute("aria-label", label);
-            button.innerHTML = arrowIcon;
-            if (direction === "next") button.querySelector("svg").style.transform = "rotate(180deg)";
-            return button;
-        }
-
-        function moveCardByImage(fileName, targetTrack) {
-            var image = document.querySelector('.team-content img[src$="' + fileName + '"]');
-            var card = image ? image.closest('[role="listitem"]') : null;
-            if (card && targetTrack && card.parentElement !== targetTrack) targetTrack.appendChild(card);
-        }
-
-        function initCarousel(track, index) {
-            var carousel = track.parentElement;
-            var cards = Array.prototype.slice.call(track.children).filter(function (child) {
-                return child.matches('[role="listitem"]');
-            });
-            if (!cards.length) return;
-
-            var label = getGroupLabel(track);
-            carousel.classList.add("people-carousel");
-            track.classList.add("people-carousel__track");
-            cards.forEach(enrichCard);
-            cards.slice(0, Math.min(cards.length, 4)).forEach(function (card) {
-                var clone = card.cloneNode(true);
-                clone.removeAttribute("id");
-                clone.setAttribute("aria-hidden", "true");
-                clone.querySelectorAll("a, button").forEach(function (element) {
-                    element.tabIndex = -1;
-                });
-                track.appendChild(clone);
-            });
-
-            var viewport = document.createElement("div");
-            viewport.className = "people-carousel__viewport";
-            viewport.tabIndex = 0;
-            viewport.setAttribute("aria-label", label + " carousel");
-            viewport.setAttribute("aria-roledescription", "carousel");
-            carousel.insertBefore(viewport, track);
-            viewport.appendChild(track);
-
-            var controls = document.createElement("div");
-            controls.className = "people-carousel__controls";
-            var previous = createButton("previous", "Previous " + label);
-            var next = createButton("next", "Next " + label);
-            controls.append(previous, next);
-            carousel.insertBefore(controls, viewport);
-
-            var pagination = document.createElement("div");
-            pagination.className = "people-carousel__pagination";
-            pagination.setAttribute("aria-label", label + " pages");
-            carousel.appendChild(pagination);
-
-            var dots = cards.map(function (card, cardIndex) {
-                var heading = card.querySelector("h4");
-                var name = heading ? heading.textContent.replace(/\s+/g, " ").trim() : "person " + (cardIndex + 1);
-                card.id = card.id || "people-card-" + index + "-" + cardIndex;
-                var dot = document.createElement("button");
-                dot.type = "button";
-                dot.className = "people-carousel__dot";
-                dot.setAttribute("aria-label", "Go to " + name);
-                dot.addEventListener("click", function () {
-                    interactionPauseUntil = Date.now() + 3000;
-                    viewport.scrollTo({left: card.offsetLeft - track.offsetLeft, behavior: "smooth"});
-                });
-                pagination.appendChild(dot);
-                return dot;
-            });
-
-            var animationFrame = 0;
-            function getCycleWidth() {
-                var gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-                return cards.reduce(function (width, card) {
-                    return width + card.getBoundingClientRect().width + gap;
-                }, 0);
-            }
-
-            function update() {
-                animationFrame = 0;
-                var cycleWidth = getCycleWidth();
-                if (cycleWidth && viewport.scrollLeft >= cycleWidth) viewport.scrollLeft -= cycleWidth;
-                var nearest = 0;
-                var nearestDistance = Infinity;
-                cards.forEach(function (card, cardIndex) {
-                    var distance = Math.abs((card.offsetLeft - track.offsetLeft) - viewport.scrollLeft);
-                    if (distance < nearestDistance) {
-                        nearest = cardIndex;
-                        nearestDistance = distance;
-                    }
-                });
-                dots.forEach(function (dot, dotIndex) {
-                    dot.classList.toggle("is-active", dotIndex === nearest);
-                    dot.setAttribute("aria-current", dotIndex === nearest ? "true" : "false");
-                });
-                previous.disabled = next.disabled = viewport.scrollWidth <= viewport.clientWidth + 2;
-            }
-
-            function queueUpdate() {
-                if (!animationFrame) animationFrame = window.requestAnimationFrame(update);
-            }
-
-            function scrollOne(direction) {
-                interactionPauseUntil = Date.now() + 3000;
-                var gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-                if (direction < 0 && viewport.scrollLeft <= 2) viewport.scrollLeft = getCycleWidth();
-                viewport.scrollBy({
-                    left: direction * (cards[0].getBoundingClientRect().width + gap),
-                    behavior: "smooth"
-                });
-            }
-
-            previous.addEventListener("click", function () { scrollOne(-1); });
-            next.addEventListener("click", function () { scrollOne(1); });
-            viewport.addEventListener("scroll", queueUpdate, {passive: true});
-            window.addEventListener("resize", queueUpdate, {passive: true});
-
-            var dragging = false;
-            var moved = false;
-            var startX = 0;
-            var startScroll = 0;
-            var hoverPaused = false;
-            var interactionPauseUntil = 0;
-
-            viewport.addEventListener("pointerdown", function (event) {
-                interactionPauseUntil = Date.now() + 3000;
-                if (event.pointerType === "touch" || event.button !== 0) return;
-                dragging = true;
-                moved = false;
-                startX = event.clientX;
-                startScroll = viewport.scrollLeft;
-                viewport.classList.add("is-dragging");
-                viewport.setPointerCapture(event.pointerId);
-            });
-
-            viewport.addEventListener("pointermove", function (event) {
-                if (!dragging) return;
-                var delta = event.clientX - startX;
-                if (Math.abs(delta) > 4) moved = true;
-                viewport.scrollLeft = startScroll - delta;
-            });
-
-            function stopDragging(event) {
-                if (!dragging) return;
-                dragging = false;
-                viewport.classList.remove("is-dragging");
-                if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
-                queueUpdate();
-            }
-
-            viewport.addEventListener("pointerup", stopDragging);
-            viewport.addEventListener("pointercancel", stopDragging);
-            viewport.addEventListener("click", function (event) {
-                if (moved) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    moved = false;
-                }
-            }, true);
-
-            viewport.addEventListener("keydown", function (event) {
-                if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-                    event.preventDefault();
-                    scrollOne(event.key === "ArrowLeft" ? -1 : 1);
-                }
-            });
-
-            viewport.addEventListener("mouseenter", function () {
-                hoverPaused = true;
-            });
-
-            viewport.addEventListener("mouseleave", function () {
-                hoverPaused = false;
-            });
-
-            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                viewport.classList.add("is-auto-playing");
-                var previousTime = 0;
-                function autoScroll(currentTime) {
-                    var elapsed = previousTime ? Math.min(currentTime - previousTime, 50) : 0;
-                    previousTime = currentTime;
-                    var cycleWidth = getCycleWidth();
-                    if (!hoverPaused && !dragging && Date.now() >= interactionPauseUntil && cycleWidth > 0) {
-                        viewport.scrollLeft += elapsed * 0.035;
-                        if (viewport.scrollLeft >= cycleWidth) viewport.scrollLeft -= cycleWidth;
-                    }
-                    window.requestAnimationFrame(autoScroll);
-                }
-                window.requestAnimationFrame(autoScroll);
-            }
-
-            update();
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            var tracks = document.querySelectorAll(".team-content");
-            moveCardByImage("Sicheng Nian.png", tracks[0]);
-            moveCardByImage("Xudong Jiang.jpg", tracks[1]);
-            tracks.forEach(initCarousel);
-        });
-    })();
 </script>
 <script>
     function backToTop() {
