@@ -11,6 +11,8 @@
 .pi-copy h2 { margin-bottom: 6px; font-size: clamp(42px, 4.4vw, 58px); font-weight: 540; letter-spacing: -.06em; line-height: 1; }
 .pi-role { margin-bottom: 20px !important; color: var(--muted) !important; font-size: 13px !important; }
 .pi-copy > p:not(.kicker):not(.pi-role) { max-width: 650px; margin-bottom: 13px; color: var(--muted); font-size: 15px; line-height: 1.65; text-align: justify; text-justify: inter-word; }
+.pi-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.pi-link { min-height: 42px; gap: 14px; padding-inline: 18px; }
 
 .member-section { overflow: hidden; padding: 112px 0 120px; background: #fff; }
 .member-section.alternate { background: var(--paper-deep); }
@@ -75,6 +77,7 @@
 .member-card h3 { margin-bottom: 9px; font-size: 20px; font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
 .member-card h3 a:hover { color: var(--accent-dark); }
 .member-card p { display: -webkit-box; overflow: hidden; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.co-supervision { margin-top: 6px; color: #74787e; font-size: 11px; font-weight: 580; line-height: 1.4; }
 .member-card small { overflow: hidden; margin-top: auto; padding-top: 9px; color: var(--accent-dark); font-size: 12px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .alumni-card p { color: var(--ink); font-size: 13px; font-weight: 650; }
 

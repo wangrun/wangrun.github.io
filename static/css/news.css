@@ -43,7 +43,7 @@
 }
 
 .news-entry time { padding-top: 3px; color: var(--muted); font-size: 12px; font-weight: 660; letter-spacing: .02em; white-space: nowrap; }
-.news-entry > p { max-width: 850px; margin: 0; font-size: 16px; line-height: 1.65; }
+.news-entry > p { max-width: 850px; margin: 0; font-size: 16px; line-height: 1.65; text-align: justify; text-justify: inter-word; hyphens: auto; }
 .news-entry > p a { color: var(--accent-dark); font-size: 14px; font-weight: 750; white-space: nowrap; }
 .news-entry > p a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-index { justify-self: end; padding-top: 3px; color: #a6a8aa; font-size: 10px; font-weight: 650; }

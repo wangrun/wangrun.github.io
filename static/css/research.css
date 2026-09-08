@@ -103,6 +103,19 @@
 .project-item h3 { margin: 0 0 8px; font-size: 19px; font-weight: 650; letter-spacing: -.018em; line-height: 1.4; }
 .project-item p { max-width: 760px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; text-align: justify; text-justify: inter-word; hyphens: auto; }
 .project-index { justify-self: end; color: #a3a5a6; font-size: 11px; }
+.completed-projects { border-bottom: 1px solid var(--ink); }
+.completed-projects-toggle { display: flex; min-height: 82px; cursor: pointer; align-items: center; justify-content: space-between; gap: 24px; list-style: none; color: var(--ink); transition: color .2s, padding .25s var(--ease); }
+.completed-projects-toggle::-webkit-details-marker { display: none; }
+.completed-projects-toggle:hover { padding-inline: 8px; color: var(--accent); }
+.completed-projects-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.completed-projects-label { display: flex; align-items: baseline; gap: 14px; font-size: 14px; font-weight: 720; letter-spacing: .02em; }
+.completed-projects-label small { color: var(--muted); font-size: 10px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; }
+.toggle-open { display: none; }
+.completed-projects-icon { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); border-radius: 50%; font-size: 15px; transition: border-color .2s, transform .3s var(--ease); }
+.completed-projects[open] .toggle-closed { display: none; }
+.completed-projects[open] .toggle-open { display: inline; }
+.completed-projects[open] .completed-projects-icon { border-color: rgba(91,95,245,.38); transform: rotate(180deg); }
+.completed-project-list { border-top-color: var(--line); }
 
 @media (max-width: 980px) {
   .research-hero { min-height: auto; }
@@ -148,5 +161,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .research-index a, .focus-list li { transition: none; }
+  .research-index a, .focus-list li, .completed-projects-toggle, .completed-projects-icon { transition: none; }
 }
